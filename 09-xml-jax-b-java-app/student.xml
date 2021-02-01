@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Student>
+    <Student-id>101</Student-id>
+    <Student-Name>vikas</Student-Name>
+    <Student-Skill>java</Student-Skill>
+    <Student-Age>20</Student-Age>
+</Student>
