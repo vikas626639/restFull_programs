@@ -1,0 +1,17 @@
+[
+	{
+		"Student-id": 101,
+		"Student-Name": "vikas",
+		"Student-Skill": "java"
+	},
+	{
+		"Student-id": 102,
+		"Student-Name": "prabja",
+		"Student-Skill": "java"
+	},
+	{
+		"Student-id": 103,
+		"Student-Name": "ritika",
+		"Student-Skill": "java"
+	}
+]
