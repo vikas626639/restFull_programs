@@ -3,6 +3,7 @@ package com.nit.rest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,9 +11,20 @@ import org.springframework.web.bind.annotation.RestController;
 import com.nit.request.PassangerInfo;
 import com.nit.responce.Ticket;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+
 @RestController
+@Api("this is railway online distributed component")
 public class rail_rest_Controller {
 	
+	@ApiResponses( value = {
+			@ApiResponse(code = 201, message = "Resource created"),
+			@ApiResponse(code = 500, message = "server error")
+	})
+	@ApiOperation("this is used to book train ticket")
 	@PostMapping(value = "/bookticket", produces = {"application/json",
 													"application/xml"}, 
 			
@@ -46,4 +58,10 @@ public class rail_rest_Controller {
 		i.setTrainNumber("98915");
 		return i;
 	}
+	@GetMapping(value = "/getpnr{pnr}", produces = {"application/json","application/xml"})
+	public String getStatus(@PathVariable("pnr")String pnr) {
+		//creating passanger object
+		return "confirmed";
+	}
 }
+
